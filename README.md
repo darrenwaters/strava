@@ -27,5 +27,22 @@ However, there's clearly a pattern we can use.
 
 So what I want to do is find a way to extract the AM or PM from the date and add that into a separate column. 
 
-I also want to use the date and find a mechanism to grab the day of the week. That way I can then think about counting how many runs, distance and pace I run at per day of the week.
+I also wanted to use the date and find a mechanism to grab the day of the week. That way I can then think about counting how many runs, distance and pace I run at per day of the week.
+
+BIG PROBLEM NUMBER 1.
+
+So I spent hours trying to convert Apr 24, 2016, 9:09:53 AM into a date format I could use. I tried variations on grabbing bits of the text string (=LEFT, =RIGHT, =MID) and then re-assembling using "&-" but could not get it to work. I also tried to use =datevalue but that kept returning an error.
+
+In the end I turned to Twitter and Slack. And quickly got a result....
+
+Ben Smith, a mutual follower on Twitter, sent me this: "=DATEVALUE(MID(A1,5,2)&"-"&MID(A1,1,3)&"-"&MID(A1,9,4))"
+
+Essentially that function forces a date value from a string, and the use of MID with &"-" assembled the text into a string the function could recognise! 
+
+The only manual built was having to adjust the function where the date was a single character rather than two. i.e. "1" rather than "10". That meant I had to adjust where MID was pulling the text.
+
+Two and a half hours later and I was close to having a spreadsheet I could actually query!
+
+
+
 

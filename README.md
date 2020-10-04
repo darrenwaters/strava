@@ -53,4 +53,7 @@ This then meant I could use =COUNTIF. And from that I could asily see that Sunda
 
 Progress!
 
+## BIG PROBLEM NUMBER 3
+
+So I've built some pivot tables to analyse my data by day of the week, and by year. And I realised something... there's a lot of missing data. A quick investigation into why my 2015 data looked so thin and it became obvious: I wasn't really using Strave for a period of time in 2015. So where was it?
 

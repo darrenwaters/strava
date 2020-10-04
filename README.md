@@ -43,7 +43,7 @@ The only manual built was having to adjust the function where the date was a sin
 
 Two and a half hours later and I was close to having a spreadsheet I could actually query!
 
-## BIG PROBLEM NUMBER 2
+##  PROBLEM NUMBER 2
 
 Now I had my dates expressed as, for example, Saturday, 8 September 2018 the next problem I had was in counting how many times the days of the week appear. And that's because now the strings are dates Excel doesn't actually see the text it's only aware of the underlying data value.
 
@@ -53,7 +53,18 @@ This then meant I could use =COUNTIF. And from that I could asily see that Sunda
 
 Progress!
 
-## BIG PROBLEM NUMBER 3
+##  PROBLEM NUMBER 3
 
-So I've built some pivot tables to analyse my data by day of the week, and by year. And I realised something... there's a lot of missing data. A quick investigation into why my 2015 data looked so thin and it became obvious: I wasn't really using Strave for a period of time in 2015. So where was it?
+So I've built some pivot tables to analyse my data by day of the week, and by year. And I spotted something... there's a lot of missing data. A quick investigation into why my 2015 data looked so thin and it became obvious: I wasn't  using Strav for a period of time in 2015. So where was it?
+
+It was in a different cloud activity tracker called TomTom Sports. The good news is that I'm able to export my missing runs, and able to import them into Strava. The bad news is Strava only allows only one bulk download of activity data per week. 
+
+So.... what can I do? 
+
+I'm trying to convert these .gpx files (common format for GPS-based activities) into .CSV files. And at that point I can try and manually add this data into my master spreadsheet. But I know that's going to have issues around whether the fields are the same. 
+
+##  PROBLEM NUMBER 4
+
+As I feared the tool I'm using doesn't preserve the data I need - date, distance, time elapsed etc - and instead picks metadata I don't really want. So what to do? More investigaton I feel.
+
 

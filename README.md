@@ -29,7 +29,7 @@ So what I want to do is find a way to extract the AM or PM from the date and add
 
 I also wanted to use the date and find a mechanism to grab the day of the week. That way I can then think about counting how many runs, distance and pace I run at per day of the week.
 
-##BIG PROBLEM NUMBER 1.
+# BIG PROBLEM NUMBER 1.
 
 So I spent hours trying to convert Apr 24, 2016, 9:09:53 AM into a date format I could use. I tried variations on grabbing bits of the text string (=LEFT, =RIGHT, =MID) and then re-assembling using "&-" but could not get it to work. I also tried to use =datevalue but that kept returning an error.
 
@@ -43,7 +43,7 @@ The only manual built was having to adjust the function where the date was a sin
 
 Two and a half hours later and I was close to having a spreadsheet I could actually query!
 
-##BIG PROBLEM NUMBER 2
+# BIG PROBLEM NUMBER 2
 
 Now I had my dates expressed as, for example, Saturday, 8 September 2018 the next problem I had was in counting how many times the days of the week appear. And that's because now the strings are dates Excel doesn't actually see the text it's only aware of the underlying data value.
 

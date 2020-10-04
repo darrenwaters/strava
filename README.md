@@ -1,5 +1,6 @@
 # Strava
 Analysis of my personal Strava data (running). 
+
 **Please note - this repository is written in a form of stream of consciousness. i.e. As I write it I am taking steps in order as I did them.**
 
 This repository contains my Strava data (running only) exported from the app to Excel. I wanted to use the data as a source for learning more about functions and in particular if I could extract any findings from the data.
@@ -21,17 +22,15 @@ I wanted to find out the following:
 * How has my running behaviour and performance changed over time - noting that between 2016 and 2019 I had to largely stop running due to injuries?
 
 
-The first challenge is that the data is not in a format that is easily interrogable. For example dates are expressed in the spreadshet as Apr 24, 2016, 9:09:53 AM. 
+## BIG PROBLEM NUMBER 1.
+
+The first challenge is that the data is not in a format that is easily interrogable. For example dates are expressed in the spreadshet as Apr 24, 2016, 9:09:53 AM.  That's text - not data.
 
 However, there's clearly a pattern we can use.
 
-So what I want to do is find a way to extract the AM or PM from the date and add that into a separate column. 
+I  wanted to convert the text to a date and find a mechanism to grab the day of the week, and AM or PM. That way I can then think about counting how many runs, distance and pace I run  per day of the week.
 
-I also wanted to use the date and find a mechanism to grab the day of the week. That way I can then think about counting how many runs, distance and pace I run at per day of the week.
-
-## BIG PROBLEM NUMBER 1.
-
-So I spent hours trying to convert Apr 24, 2016, 9:09:53 AM into a date format I could use. I tried variations on grabbing bits of the text string (=LEFT, =RIGHT, =MID) and then re-assembling using "&-" but could not get it to work. I also tried to use =datevalue but that kept returning an error.
+So I spent hours trying to convert "Apr 24, 2016, 9:09:53 AM" into a date format I could use. I tried variations on grabbing bits of the text string (=LEFT, =RIGHT, =MID) and then re-assembling using "&-" but could not get it to work. I also tried to use =datevalue but that kept returning an error.
 
 In the end I turned to Twitter and Slack. And quickly got a result....
 
@@ -47,7 +46,7 @@ Two and a half hours later and I was close to having a spreadsheet I could actua
 
 Now I had my dates expressed as, for example, Saturday, 8 September 2018 the next problem I had was in counting how many times the days of the week appear. And that's because now the strings are dates Excel doesn't actually see the text it's only aware of the underlying data value.
 
-So this is where I used the =TEXT function. So =TEXT(B2,"DDDD") converts the data in B2 to just a day in text in the cell. Now I had a list of all the days of the week I had run.
+So this is where I used the =TEXT function. So =TEXT(B2,"DDDD") converted the data in B2 to just a day in text in the cell. Now I had a list of all the days of the week I had run.
 
 This then meant I could use =COUNTIF. And from that I could asily see that Sunday is my most regular day to run while Thursday is my least typical day to run. 
 
@@ -63,8 +62,13 @@ So.... what can I do?
 
 I'm trying to convert these .gpx files (common format for GPS-based activities) into .CSV files. And at that point I can try and manually add this data into my master spreadsheet. But I know that's going to have issues around whether the fields are the same. 
 
-##  PROBLEM NUMBER 4
+As I feared the tool I'm using doesn't preserve the data I need - date, distance, time elapsed etc - and instead picks metadata I don't really want. So what to do? I'm going to carry on with analysis but only with the partial data.
 
-As I feared the tool I'm using doesn't preserve the data I need - date, distance, time elapsed etc - and instead picks metadata I don't really want. So what to do? More investigaton I feel.
+### PROBLEM NUMBER 4
+
+I can't quite wrangle the data into the format I want to query. 
+So I've built lots of pivot tables - trial and error - but what I can't seem to do is get exactly the data I need in a single pivot table in order to do some analysis over time.
+
+For example - I have a pivot table showing XXX
 
 

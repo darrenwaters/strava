@@ -71,7 +71,4 @@ So I've built lots of pivot tables - trial and error - but what I can't seem to 
 
 For example - I have a pivot table showing XXX
 
-![GitHub Logo](/https://github.com/darrenwaters/strava/blob/main/Screenshot%202020-10-04%20at%2023.13.17.png)
-Format: ![Alt Text](url)
-
-
+![alt text](https://github.com/darrenwaters/strava/blob/main/Screenshot%202020-10-04%20at%2023.13.17.png)

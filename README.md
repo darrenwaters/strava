@@ -54,32 +54,37 @@ Progress!
 
 ##  PROBLEM NUMBER 3
 
-So I've built some pivot tables to analyse my data by day of the week, and by year. And I spotted something... there's a lot of missing data. A quick investigation into why my 2015 data looked so thin and it became obvious: I wasn't  using Strav for a period of time in 2015. So where was it?
+So I've built some pivot tables to analyse my data by day of the week, and by year. And I spotted something... there's a lot of missing data. A quick investigation into why my 2015 data looked so thin and it became obvious: I wasn't  using Strava for a period of time in 2015. So where was this data?
 
-It was in a different cloud activity tracker called TomTom Sports. The good news is that I'm able to export my missing runs, and able to import them into Strava. The bad news is Strava only allows only one bulk download of activity data per week. 
+It was in a different cloud activity tracker called TomTom Sports. The good news is that I'm able to export my missing runs, and  import them into Strava to fill the gaps. The bad news is Strava only allows only one bulk download of activity data per week. 
 
 So.... what can I do? 
 
-I'm trying to convert these .gpx files (common format for GPS-based activities) into .CSV files. And at that point I can try and manually add this data into my master spreadsheet. But I know that's going to have issues around whether the fields are the same. 
+I've tried to convert these .gpx files (common format for GPS-based activities) into .CSV files. And at that point I can try and manually add this data into my master spreadsheet. But I know that's going to have issues around whether the fields are the same. 
 
-As I feared the tool I'm using doesn't preserve the data I need - date, distance, time elapsed etc - and instead picks metadata I don't really want. So what to do? I'm going to carry on with analysis but only with the partial data.
+Update: As I feared the tool I'm using doesn't preserve the data I need - date, distance, time elapsed etc - and instead picks metadata I don't really want. So what to do? I'm going to carry on with analysis but only with the partial data.
 
 ### PROBLEM NUMBER 4
 
 I can't quite wrangle the data into the format I want to query. 
+
 So I've built lots of pivot tables - trial and error - but what I can't seem to do is get exactly the data I need in a single pivot table in order to do some analysis over time.
 
-For example - I have a pivot table showing how many runs I do each weekday by year. You can see the screenshot below. What I want to do is calculate for each day on each year what the number of runs for that specific day is as percentage of all runs that year. So if I ran 5 times on a Monday in 2016 and ran 87 times in a year, then that's 5.7% of all runs that year. 
+For example - I have a pivot table showing how many runs I do each weekday by year. You can see the screenshot below. 
+
+What I want to do is calculate for each day on each year what the number of runs for that specific day is as a percentage of all runs that year. So if I ran 5 times on a Monday in 2016 and ran 87 times in a year, then that's 5.7% of all runs that year. 
 
 But I can't find a way to do that calculation directly through manipulating the fields in the pivot table. Am I missing something?
 
-Instead I've done a manual calculation outside of the pivot tabke by using the total number of runs from a different sheet in my workbook where I have the totals for each year listed. But here's the problem - I can't then do the calculation once and then drag down through the column to have it calculate that for each year by each day. It just replicates the same calculation.
+Instead I've done a manual calculation outside of the pivot table by using the total number of runs from a different pivot table on a different sheet in my workbook where I have the totals for each year listed. But here's the problem - I can't then do the calculation once and then drag down through the column to have it calculate that for each year by each day. It just replicates the same calculation.
+
+Two things occur to me: 1) I'm likely not setting up the Pivot Table as it could be to do this task 2) I'm tired and not thinking through this properly.
 
 ![alt text](https://github.com/darrenwaters/strava/blob/main/Screenshot%202020-10-04%20at%2023.13.17.png)
 
 ### So what next?
 
-I'm going to get the missing data into the sheet and then re-run the analysis. Hopefully this repo helps me walk through the steps again.
+I'm going to get the missing data into the sheet and then re-run the analysis. Hopefully this repo helps me walk through the steps again. There are a few questions I still want to answer, also.
 
 I'm also going to read more of Paul's Spreadsheets book to see if there are more fun ways to play with the data.
 

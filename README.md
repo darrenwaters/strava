@@ -69,6 +69,17 @@ As I feared the tool I'm using doesn't preserve the data I need - date, distance
 I can't quite wrangle the data into the format I want to query. 
 So I've built lots of pivot tables - trial and error - but what I can't seem to do is get exactly the data I need in a single pivot table in order to do some analysis over time.
 
-For example - I have a pivot table showing XXX
+For example - I have a pivot table showing how many runs I do each weekday by year. You can see the screenshot below. What I want to do is calculate for each day on each year what the number of runs for that specific day is as percentage of all runs that year. So if I ran 5 times on a Monday in 2016 and ran 87 times in a year, then that's 5.7% of all runs that year. 
+
+But I can't find a way to do that calculation directly through manipulating the fields in the pivot table. Am I missing something?
+
+Instead I've done a manual calculation outside of the pivot tabke by using the total number of runs from a different sheet in my workbook where I have the totals for each year listed. But here's the problem - I can't then do the calculation once and then drag down through the column to have it calculate that for each year by each day. It just replicates the same calculation.
 
 ![alt text](https://github.com/darrenwaters/strava/blob/main/Screenshot%202020-10-04%20at%2023.13.17.png)
+
+### So what next?
+
+I'm going to get the missing data into the sheet and then re-run the analysis. Hopefully this repo helps me walk through the steps again.
+
+I'm also going to read more of Paul's Spreadsheets book to see if there are more fun ways to play with the data.
+
